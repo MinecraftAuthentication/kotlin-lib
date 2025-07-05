@@ -60,3 +60,14 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:4.12.0"
     testImplementation "io.kotlintest:kotlintest-runner-junit5:3.4.2"
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            groupId = 'me.minecraftauth'
+            artifactId = 'mcauth-kotlin-lib'
+            version = '2.0.0'
+        }
+    }
+}
